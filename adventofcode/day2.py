@@ -2,7 +2,6 @@ from utils.fileutil import read_file_to_string_list
 
 from enum import Enum
 
-
 def part1():
     moves = read_file_to_string_list('adventofcode/day2/input.txt')
     result = 0

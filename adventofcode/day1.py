@@ -1,23 +1,5 @@
-from itertools import groupby
-
 from utils.fileutil import read_file_to_string_list
 from utils.list_util import split_lists_by_whitespace
-
-# def split_lists_by_whitespace(in_list: list) -> list[list]:
-#     """
-#     Takes a given list and splits it by a whitespace and returns a list of lists.
-#     @param in_list: The list to split.
-#     @return: The list of lists that were separated by whitespace.
-#     """
-#     return [list(sub) for ele, sub in groupby(in_list, key=bool) if ele]
-
-# def read_file_to_string_list(path: str) -> list[str]:
-#     input_lines = []
-#     with open(path) as f:
-#         for line in f:
-#             input_lines.append(str(line).strip())
-
-#     return input_lines
 
 def part1():
     """
