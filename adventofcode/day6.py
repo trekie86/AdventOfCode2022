@@ -3,23 +3,21 @@
 def part1():
     with open("adventofcode/day6/input.txt") as f:
         input = f.readline()
+    print(find_first_non_repeating(input, 4))
 
-    seen = set([])
-    for i in range(3,len(input)):
-        if len(set(input[i-3:i+1])) == 4:
-            print(i+1)
-            break
 
 def part2():
     with open("adventofcode/day6/input.txt") as f:
         input = f.readline()
+    print(find_first_non_repeating(input, 14))
 
+
+def find_first_non_repeating(input: str, sequence_size: int):
     seen = set([])
-    for i in range(13,len(input)):
-        if len(set(input[i-13:i+1])) == 14:
-            print(i+1)
-            break
-
+    offset = sequence_size - 1
+    for i in range(offset,len(input)):
+        if len(set(input[i-offset:i+1])) == sequence_size:
+            return (i+1)
 
 if __name__ == '__main__':
     part1()
