@@ -10,8 +10,6 @@ def part1():
             print(i+1)
             break
 
-
-
 def part2():
     with open("adventofcode/day6/input.txt") as f:
         input = f.readline()
